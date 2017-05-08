@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - hibernate@localhost" uuid="4708b0ca-e789-4a47-93b7-2f746955656d">
+    <database-info product="MySQL" version="5.7.12-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="hibernate"/>
+      <table id="2" parent="1" name="comment"/>
+      <table id="3" parent="1" name="goods"/>
+      <table id="4" parent="1" name="haddressm"/>
+      <table id="5" parent="1" name="orders"/>
+      <table id="6" parent="1" name="shoppingcart"/>
+      <table id="7" parent="1" name="user"/>
+      <table id="8" parent="1" name="student"/>
+      <column id="9" parent="2" name="gid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="10" parent="2" name="Ctext">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="11" parent="2" name="uname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <index id="12" parent="2" name="username">
+        <columns>uname</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="13" parent="2" name="PRIMARY">
+        <columns>gid
+Ctext
+uname</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="14" parent="2" name="comment">
+        <columns>gid</columns>
+        <ref-key>~.goods.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="15" parent="2" name="username">
+        <columns>uname</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="16" parent="3" name="gid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="17" parent="3" name="gname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="18" parent="3" name="gprice">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="19" parent="3" name="gphoto">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="20" parent="3" name="gnumber">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="21" parent="3" name="gintroduce">
+        <data-type>text</data-type>
+      </column>
+      <column id="22" parent="3" name="gbrand">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="23" parent="3" name="gtype">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <key id="24" parent="3" name="PRIMARY">
+        <columns>gid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="25" parent="4" name="hid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="26" parent="4" name="uname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="27" parent="4" name="hname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="28" parent="4" name="hiphone">
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="29" parent="4" name="haddress">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <index id="30" parent="4" name="huname">
+        <columns>uname</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="31" parent="4" name="PRIMARY">
+        <columns>hid</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="32" parent="4" name="huname">
+        <columns>uname</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="33" parent="5" name="Oid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="34" parent="5" name="hid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="35" parent="5" name="gid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="36" parent="5" name="gnum">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="37" parent="5" name="date">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="38" parent="5" name="sum">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="39" parent="5" name="gname">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <index id="40" parent="5" name="o_gid">
+        <columns>gid</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="41" parent="5" name="o_hid">
+        <columns>hid</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="42" parent="5" name="PRIMARY">
+        <columns>Oid
+hid
+gid</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="43" parent="5" name="o_gid">
+        <columns>gid</columns>
+        <ref-key>~.goods.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="44" parent="5" name="o_hid">
+        <columns>hid</columns>
+        <ref-key>~.haddressm.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="45" parent="6" name="gid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="46" parent="6" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="47" parent="6" name="gnum">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="48" parent="6" name="name">
+        <columns>name</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="49" parent="6" name="PRIMARY">
+        <columns>gid
+name</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="50" parent="6" name="gid">
+        <columns>gid</columns>
+        <ref-key>~.goods.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="51" parent="6" name="name">
+        <columns>name</columns>
+        <ref-key>~.user.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="52" parent="7" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="53" parent="7" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="54" parent="7" name="email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(25)</data-type>
+      </column>
+      <column id="55" parent="7" name="regtime">
+        <data-type>date</data-type>
+      </column>
+      <column id="56" parent="7" name="money">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="57" parent="7" name="email">
+        <columns>email</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="58" parent="7" name="email">
+        <columns>email</columns>
+        <underlying-index>email</underlying-index>
+      </key>
+      <key id="59" parent="7" name="PRIMARY">
+        <columns>name</columns>
+        <primary>1</primary>
+      </key>
+      <column id="60" parent="8" name="stuNo">
+        <mandatory>1</mandatory>
+        <data-type>char(32)</data-type>
+      </column>
+      <column id="61" parent="8" name="stuName">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="62" parent="8" name="sex">
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="63" parent="8" name="cource">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="64" parent="8" name="grade">
+        <data-type>decimal(18)</data-type>
+      </column>
+      <key id="65" parent="8" name="PRIMARY">
+        <columns>stuNo</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
